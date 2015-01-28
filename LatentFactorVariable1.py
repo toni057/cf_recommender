@@ -1,11 +1,13 @@
-# -*- coding: utf-8 -*-
 """
-Created on Fri Jan 23 23:54:02 2015
+File contains classes:
+
+LatentFactorVariable1:
+    Implements the SVD approach.
+    
 
 @author: toni
 """
 
-#runfile('BaselinePredictor.py')
 from BaselinePredictor import BaselinePredictor
 
 

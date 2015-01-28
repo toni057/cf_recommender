@@ -1,11 +1,13 @@
-# -*- coding: utf-8 -*-
 """
-Created on Tue Jan 27 18:27:02 2015
+File contains classes:
+
+BaselinePredictor:
+    Implements the baseline predictor.
+
 
 @author: toni
 """
 
-#runfile('Base.py')
 from Base import Base
 
 

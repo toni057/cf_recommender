@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 File contains classes:
 
@@ -6,10 +5,6 @@ Base:
     Implements basic data loading and transformation to suitable formats.
     
     
-BaselinePredictor:
-    Implements the baseline predictor.
-
-
 @author: toni
 """
 
