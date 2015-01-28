@@ -10,14 +10,27 @@ BaselinePredictor:
 
 from Base import Base
 
+import pandas as pd
+import numpy as np
+
+from numpy.linalg import norm
+from scipy.sparse import csr_matrix
+
+from progressbar import ProgressBar, Percentage, Bar, ETA
+
+
 
 class BaselinePredictor(Base):
     
     db = "db.sqlite3"
     
     
-    def __init__(self, df = None):
-        self.df = df
+    def __init__(self, df = None, transform = False):
+        if (df is not None):
+            self.df = df
+            
+            if (transform == True):
+                self.transformData()
     
     
     def fit_baseline(self, d = 1/5):
@@ -132,7 +145,7 @@ class BaselinePredictor(Base):
                 x2 = self.M[:,i2]
                 I = np.logical_and(x1, x2)
                 if (len(I) > 1):
-                    self.S[i1,i2] = self.S[i2,i1] = sim.cos2(x1.T[I], self.M[:,i2].T[I])
+                    self.S[i1,i2] = self.S[i2,i1] = Sim.cos2(x1.T[I], self.M[:,i2].T[I])
             
             pbar.update((self.n_it)*(i1+1) - (i1+2)*(i1+1)/2)
         

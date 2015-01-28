@@ -14,8 +14,14 @@ from BaselinePredictor import BaselinePredictor
 class LatentFactorVariable1(BaselinePredictor):
     
     
-    def __init__(self, df, D = 20):
-        self.df = df
+    def __init__(self, df = None, D = 20, transform = False):
+        if (df is not None):
+            self.df = df
+            
+            if (transform == True):
+                self.transformData()
+        
+        
         self.D = D
     
     

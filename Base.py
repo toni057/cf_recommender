@@ -8,11 +8,18 @@ Base:
 @author: toni
 """
 
+import pandas as pd
+import numpy as np
+
 
 class Base:
     
     def __init__(self, df = None, transform = False):
-        self.df = df
+        
+        if (df is None):
+            pass
+        else:
+            self.df = df
         
         if (transform == True):
             self.transformData()

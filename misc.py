@@ -8,12 +8,11 @@
 import pandas as pd
 import numpy as np
 
-from scipy.sparse import *
+from scipy.sparse import lil_matrix, csr_matrix
 from numpy.linalg import norm
 from pylab import hist
 
 from time import time
-from progressbar import *
 
 from scipy.sparse.linalg import lsqr
 
@@ -23,7 +22,7 @@ import sqlite3 as sqlite3
 
 
 
-class sim():
+class Sim():
     
     @staticmethod
     def cos(x, y):
